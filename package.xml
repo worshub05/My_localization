@@ -3,9 +3,9 @@
 <package format="3">
   <name>my_localization</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Particle filter localization in Gazebo</description>
   <maintainer email="worshub05@gmail.com">shub_2605</maintainer>
-  <license>TODO: License declaration</license>
+  <license>MIT</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
