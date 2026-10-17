@@ -34,6 +34,16 @@ def main():
     path = sys.argv[1] if len(sys.argv) > 1 else 'results/trajectory_log.csv'
     out_dir = os.path.dirname(os.path.abspath(path))
     d = np.genfromtxt(path, delimiter=',', names=True)
+
+    # Keep only the driving period: stop 3 s after the robot's last
+    # movement, so the time it sits still at the end does not skew the
+    # averages.
+    step = np.hypot(np.diff(d['gt_x']), np.diff(d['gt_y']))
+    turn = np.abs(wrap(np.diff(d['gt_th'])))
+    moving = np.where((step > 1e-3) | (turn > 1e-3))[0]
+    if len(moving) > 0:
+        end = min(len(d), moving[-1] + 1 + 30)   # +3 s at 10 Hz
+        d = d[:end]
     t = d['t']
 
     err_dr = np.hypot(d['dr_x'] - d['gt_x'], d['dr_y'] - d['gt_y'])

@@ -1,10 +1,10 @@
-Samples: 1881  Duration: 188.0 s
+Samples: 665  Duration: 66.4 s
 Distance travelled (ground truth): 20.46 m
 
 Position error (m)              RMSE    Mean     Max   Final
-Dead reckoning (odometry)      0.738   0.677   0.860   0.851
-Particle filter                0.037   0.023   0.122   0.003
+Dead reckoning (odometry)      0.466   0.360   0.860   0.851
+Particle filter                0.061   0.054   0.122   0.033
 
 Heading error (deg)             RMSE    Mean     Max   Final
-Dead reckoning (odometry)       9.10    8.42   12.07   10.30
-Particle filter                 0.59    0.26    3.10    0.04
+Dead reckoning (odometry)       6.33    4.99   12.07   10.30
+Particle filter                 0.98    0.59    3.10    0.15
