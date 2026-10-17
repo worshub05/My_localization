@@ -33,6 +33,8 @@ setup(
             'noisy_odom_node = my_localization.noisy_odom_node:main',
             'landmark_sensor_node = '
             'my_localization.landmark_sensor_node:main',
+            'particle_filter_node = '
+            'my_localization.particle_filter_node:main',
         ],
     },
 )
