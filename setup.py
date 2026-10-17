@@ -35,6 +35,7 @@ setup(
             'my_localization.landmark_sensor_node:main',
             'particle_filter_node = '
             'my_localization.particle_filter_node:main',
+            'logger_node = my_localization.logger_node:main',
         ],
     },
 )

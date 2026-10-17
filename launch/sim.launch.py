@@ -41,9 +41,13 @@ def generate_launch_description():
         package='my_localization', executable='particle_filter_node',
         output='screen', parameters=[sim_time])
 
+    logger = Node(
+        package='my_localization', executable='logger_node',
+        output='screen', parameters=[sim_time])
+
     drive = Node(
         package='my_localization', executable='drive_node',
         output='screen', parameters=[sim_time])
 
     return LaunchDescription([gz, bridge, noisy_odom, landmark_sensor,
-                              particle_filter, drive])
+                              particle_filter, logger, drive])
