@@ -33,8 +33,13 @@ def generate_launch_description():
         package='my_localization', executable='noisy_odom_node',
         output='screen', parameters=[sim_time])
 
+    landmark_sensor = Node(
+        package='my_localization', executable='landmark_sensor_node',
+        output='screen', parameters=[sim_time])
+
     drive = Node(
         package='my_localization', executable='drive_node',
         output='screen', parameters=[sim_time])
 
-    return LaunchDescription([gz, bridge, noisy_odom, drive])
+    return LaunchDescription([gz, bridge, noisy_odom, landmark_sensor,
+                              drive])

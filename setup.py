@@ -31,6 +31,8 @@ setup(
         'console_scripts': [
             'drive_node = my_localization.drive_node:main',
             'noisy_odom_node = my_localization.noisy_odom_node:main',
+            'landmark_sensor_node = '
+            'my_localization.landmark_sensor_node:main',
         ],
     },
 )
